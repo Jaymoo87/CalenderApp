@@ -8,6 +8,12 @@ const pg = {
   database: process.env.DB_NAME,
 };
 
+const jwt = {
+  secret: process.env.JWT_KEY,
+  expiration: process.env.JWT_EXPIRATION,
+};
+
 export default {
   pg,
+  jwt,
 };

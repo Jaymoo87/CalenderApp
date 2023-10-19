@@ -7,6 +7,7 @@ export interface User {
   phone: string;
   email_verified: boolean;
   phone_verified: boolean;
+  mfa_preference: 'none' | 'email' | 'phone';
 }
 
 export interface Event {
@@ -16,4 +17,11 @@ export interface Event {
   description?: string;
   location?: string;
   date_time: string;
+}
+
+export interface Payload {
+  id: User['id'];
+  name: User['name'];
+  email: User['email'];
+  username: User['username'];
 }
